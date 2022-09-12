@@ -1,7 +1,5 @@
 use strict;
 
-use Scalar::Util qw(looks_like_number);
-
 my $year = 1980;
 
 while($year <= 2010){
