@@ -1,11 +1,10 @@
 use strict;
-my $outfile = "myoutfile1.txt";
+my $outfile = "myoutfile2.txt";
 open(OUTFILE, "> $outfile") or die "Cannot write to $outfile\n";
 
 my $year = 1980;
 
-while($year <= 2010){
-    $year % 10 ==0 ? print OUTFILE "\n$year Yeay were reaching a new decade\n" : print OUTFILE $year, " ";;
-    $year++;
+for(my $i = 1; $i <= 100; $i++){
+	$i % 2 ==0 ? print OUTFILE " " : print OUTFILE "$i";
 }
 close(OUTFILE);
