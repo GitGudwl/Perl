@@ -25,8 +25,3 @@ foreach my $expr (@array) {
         print uc($expr),"\n";
     }
 }
-
-
-
- 
-
