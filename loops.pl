@@ -19,8 +19,14 @@ my @array = ("james Bond 007", "Departement of statistic", "University of oxford
 
 print "String has number check\n";
 foreach my $expr (@array) {
-     if ($expr =~ /^[a-zA-Z ]+$/){
-        print "/$expr/ doesnt contain any number : ";
+     if ($expr  =~ /[0-9]/){
+        print "/$expr/ contain numbers : ";
+        $expr =~ s/\d//g;
         print uc($expr),"\n";
     }
 }
+
+
+
+ 
+
