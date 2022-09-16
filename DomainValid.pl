@@ -1,10 +1,14 @@
 use strict;
-my $domain = "WWW.google.com";
-$domain = lc($domain);
-print $domain, "\n";
-if($domain =~ m/\.com|\.id|\.net$/ and $domain =~ m/^www/){
-    print "Domain is valid\n";
+my $domain;
+while(1){
+    print "domain : ";
+    $domain =  <STDIN>;
+    chomp $domain;
+    $domain = lc($domain);
+
+    if($domain =~ m/\.com|\.id|\.net$/ and $domain =~ m/^www/){
+        print "Domain is valid\n";
+        last;
+    }
+        print "Domain is invalid please try again\n";
 }
-else{
-    print "Domain is invalid\n";
-} 
